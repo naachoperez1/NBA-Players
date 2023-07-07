@@ -1,12 +1,10 @@
 package com.example.springbootapirest;
 
-import com.example.springbootapirest.entities.Laptop;
-import com.example.springbootapirest.repository.LaptopRepository;
+import com.example.springbootapirest.entities.Player;
+import com.example.springbootapirest.repository.PlayerRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
-import java.time.LocalDate;
 
 @SpringBootApplication
 public class SpringBootApiRestApplication {
@@ -14,21 +12,21 @@ public class SpringBootApiRestApplication {
     public static void main(String[] args) {
 
         ApplicationContext context = SpringApplication.run(SpringBootApiRestApplication.class, args);
-        LaptopRepository repository = context.getBean(LaptopRepository.class);
+        PlayerRepository repository = context.getBean(PlayerRepository.class);
 
         // CRUD
         // Crear Laptop
-        Laptop laptop1 = new Laptop(null, "VivoBook", "ASUS", 280.50);
-        Laptop laptop2 = new Laptop(null, "RESTFull Notebook", "ASUS", 210.50);
-        Laptop laptop3 = new Laptop(null, "Mac Pro 12", "Apple", 280.50);
+        Player player1 = new Player(null, "LeBron", "James", 38, "Los Angeles Lakers");
+        Player player2 = new Player(null, "Stephen", "Curry", 35, "Golden State Warriors");
+        Player player3 = new Player(null, "Kevin", "Durant", 35, "Phoenix Suns");
 
         // Guardar una laptop
-        repository.save(laptop1);
-        repository.save(laptop2);
-        repository.save(laptop3);
+        repository.save(player1);
+        repository.save(player2);
+        repository.save(player3);
 
         // Recuperar todas las laptop
-        System.out.println(repository.findAll());
+//        System.out.println(repository.findAll());
 
         // Borrar una laptop
 //        repository.delete(laptop3);

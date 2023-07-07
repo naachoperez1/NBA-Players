@@ -1,9 +1,9 @@
 package com.example.springbootapirest.repository;
 
-import com.example.springbootapirest.entities.Laptop;
+import com.example.springbootapirest.entities.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LaptopRepository extends JpaRepository <Laptop,Long>{
+public interface PlayerRepository extends JpaRepository <Player,Long>{
 }
