@@ -15,21 +15,17 @@ public class SpringBootApiRestApplication {
         PlayerRepository repository = context.getBean(PlayerRepository.class);
 
         // CRUD
-        // Crear Laptop
+        // Crear Jugadores
         Player player1 = new Player(null, "LeBron", "James", 38, "Los Angeles Lakers");
         Player player2 = new Player(null, "Stephen", "Curry", 35, "Golden State Warriors");
         Player player3 = new Player(null, "Kevin", "Durant", 35, "Phoenix Suns");
+        // Ingresar los jugadores que quiera.
 
-        // Guardar una laptop
+        // Guardar jugadores
         repository.save(player1);
         repository.save(player2);
         repository.save(player3);
 
-        // Recuperar todas las laptop
-//        System.out.println(repository.findAll());
-
-        // Borrar una laptop
-//        repository.delete(laptop3);
 
     }
 
