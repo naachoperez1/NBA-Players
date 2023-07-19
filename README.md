@@ -31,7 +31,7 @@ The data sent and received by the api must be in JSON format:
 * 404 Not Found: Could not find the player in the databse.
 * 500 Internal Server Error: An internal sever error has ocurred.
 
-## APU usage
+## API usage
 
 To use this API, make HTTP requests to the different endpoints using cURL or Postman.
 Make sure to include the data required in the POST and PUT requests in JSON format.
