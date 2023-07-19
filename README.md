@@ -1,18 +1,18 @@
-# API REST de jugadores de la NBA.
+# NBA Players API.
 
-¡Bienvenido/a a la API REST de Jugadores de la NBA! Esta API te permitirá acceder y gestionar información sobre los mismos.
+¡Welcome to the NBA players API! This api lets you get, insert and manage information about current and past NBA players.
 
-Endpoints Disponibles:
-* GET api/players: Obtiene una lista de todos los jugadores registrados en la base de datos.
-* GET api/players/{id}: Obtiene los detalles de un jugador específico según su ID.
-* POST api/players: Crea un nuevo jugador en la base de datos. Debes proporcionar los datos requeridos en el cuerpo de la solicitud.
-* PUT api/players/{id}: Actualiza los datos de un jugador existente según su ID. Debes proporcionar los datos actualizados en el cuerpo de la solicitud.
-* DELETE api/players/{id}: Elimina un jugador de la base de datos según su ID.
+## Available Endpoints:
+* GET api/players: Get a list of all players in the database.
+* GET api/players/{id}: Get one player specified by id.
+* POST api/players: Create a player in the database. You must include all the data required ind the request body.
+* PUT api/players/{id}: Update an specified player by it's id. You must include all the data required ind the request body.
+* DELETE api/players/{id}: Delete a player by id.
 
 
-## Formato de Datos
+## Data Format.
 
-Los datos enviados y recibidos por la API deben estar en formato JSON. A continuación se muestra un ejemplo del formato de un jugador:
+The data sent and received by the api must be in JSON format:
 
     {
     "id": 1,
@@ -22,30 +22,29 @@ Los datos enviados y recibidos por la API deben estar en formato JSON. A continu
     "edad": 38
     }
 
-## Códigos de Estado
+## Status codes.
 
-La API utiliza los siguientes códigos de estado HTTP en sus respuestas:
+* 200 OK: The request was succesfull and you will get the info you requested .
+* 201 Created: Player created succesfully.
+* 204 No Content: Succesfully requested, but no info to retrieve.
+* 400 Bad Request: Incorrect request.
+* 404 Not Found: Could not find the player in the databse.
+* 500 Internal Server Error: An internal sever error has ocurred.
 
-* 200 OK: La solicitud fue exitosa y se devolverá la información solicitada.
-* 201 Created: El jugador fue creado exitosamente.
-* 204 No Content: La solicitud fue exitosa, pero no hay contenido para devolver (por ejemplo, en una eliminación exitosa).
-* 400 Bad Request: La solicitud es incorrecta o no contiene los datos necesarios.
-* 404 Not Found: El jugador solicitado no fue encontrado en la base de datos.
-* 500 Internal Server Error: Se produjo un error interno en el servidor.
+## APU usage
 
-## Uso de la API
-Para utilizar la API, realiza solicitudes HTTP a los diferentes endpoints utilizando herramientas como cURL o Postman. 
-Asegúrate de incluir los datos necesarios en el cuerpo de las solicitudes POST y PUT en formato JSON.
+To use this API, make HTTP requests to the different endpoints using cURL or Postman.
+Make sure to include the data required in the POST and PUT requests in JSON format.
 
-## Ejemplo de Uso
+## Example
 
-Supongamos que deseas obtener la lista de todos los jugadores registrados:
+Lets say you want to get a list of all the players in the database:
 
-### Solicitud:
+### Request:
 
 GET api/players
 
-### Respuesta:
+### Response:
 
     {
         "id": 1,
@@ -76,7 +75,7 @@ GET api/players
         "edad": 23
     }
 
-## Contribuciones
+## Contributions
 
-¡Esta API está en constante mejora! Si tienes alguna idea de mejora, funcionalidad adicional o encuentras algún problema,
-no dudes en contribuir abriendo un "issue" o enviando un "pull request" en nuestro repositorio.
+This API is in constant growth!, if you have an improvement idea, feature or find some problem, just contribute to it
+opening an "issue" or sending a "pull request" in the repository.
